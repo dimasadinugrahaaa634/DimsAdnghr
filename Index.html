@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RafiMlnf</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Gloock&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="player-profile">
+
+        <a href="https://pb.ecampus.id/pb/login" target="_blank">
+            <img src="image/logo_kampus.png" alt="Logo" class="logo">
+        </a>
+
+        <img class="sign-image" src="image/logo_kelas.png" alt="Sign Image" />
+
+        <div class="favorite-tag">
+            <span class="icon">★</span>
+            JAMET
+        </div>
+
+        <div class="background-container">
+            <img class="background-image" src="image/bckg1.jpg" alt="Background" />
+        </div>
+
+        <div class="player-profile">
+            <img class="background-profile-picture" src="image/jir.png" alt="Profile Picture" />
+        </div>
+
+        <div class="game-results">
+            <div class="game-card">
+                <h3>Dimas</h3>
+                <div class="score">
+                    <span>Adi Nugraha</span>
+                    <span>312210409</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-stats">
+            <div class="stat-card">
+                <h3>PHONE NUMBER</h3>
+                <div class="stat-value">-0812 8727 1851</div>
+            </div>
+            <div class="stat-card">
+                <h3>EMAIL</h3>
+                <div class="stat-value">dimasadinugraha87@gmail.com</div>
+            </div>
+            <div class="stat-card">
+                <h3>LOCATION</h3>
+                <div class="stat-value">
+                    <a href="https://maps.app.goo.gl/tBEosR5BdkNxfKmK9" target="_blank" class="location-link">
+                        Cikarang, Jawa Barat
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tombol untuk memutar musik -->
+            <button id="play-button">Play Music</button>
+            <audio id="audio-player" src="music/DJ_DIMS.mp3" loop></audio>
+        </div>
+    </main>
+
+    <script>
+        // Skrip untuk memutar audio setelah tombol diklik
+        document.getElementById('play-button').addEventListener('click', function() {
+            var audio = document.getElementById('audio-player');
+            audio.play().then(() => {
+                console.log("Audio is playing.");
+            }).catch((error) => {
+                console.log("Failed to play audio:", error);
+            });
+        });
+    </script>
+</body>
+
+</html>
